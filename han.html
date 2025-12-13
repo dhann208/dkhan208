@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tắt Đèn | Giới Thiệu Tác Phẩm Văn </title>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Tùy chỉnh màu sắc và font */
+        :root {
+            --color-MistyRose1: #FFE4E1; /* Nền đêm sâu thẳm */
+            --color-OldLace: #FDF5E6; /* Ánh sao lấp lánh */
+            --color-SandyBrown: #F4A460; /* Ánh sáng đại dương */
+            --font-poetic: 'Calibri', Times, serif;
+        }
+        body {
+            font-family: var(--font-poetic);
+            color: var(--color-OldLace);
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+            
+            /* --- NỀN ẢNH TĨNH MỚI (DARK STAR/OCEAN THEME) --- */
+            /* Sử dụng placeholder mô phỏng hình ảnh trời sao xanh đậm/đại dương */
+            background-image: url('https://gitiho.com/caches/p_medium_large//uploads/315313/images/img_nen-powerpoint-van-hoc-20.jpg'); 
+            background-size: cover;
+            background-attachment: fixed; /* Giữ ảnh cố định khi cuộn */
+            background-position: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .glow-text {
+            text-shadow: 0 0 7px var(--color-SandyBrown), 0 0 10px rgba(24, 90, 210, 0.5)
+        }
+        blockquote {
+            border-left-color: var(--color-SandyBrown);
+        }
+        .book-cover {
+            box-shadow:  0 0 15px rgba(255,255,255,0.8), 0 0 20px var(--color-SandyBrown);
+        }
+
+        /* --- LOẠI BỎ HIỆU ỨNG SÓNG BIỂN CŨ --- */
+        .ocean-background { display: none; }
+
+        /* --- HIỆU ỨNG NỐT NHẠC NHẤP NHÁY TIÊU ĐỀ --- */
+        .daudong {
+            display: inline-block;
+            color: white;
+            animation: bounce-glow 5s infinite ease-in-out;
+            margin-left: 5px;
+        }
+        
+        @keyframes bounce-glow {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.8; text-shadow: 0 0 5px var(--color-SandyBrown); }
+            50% { transform: translateY(-5px) scale(1.2); opacity: 1; text-shadow: 0 0 15px var(--color-SandyBrown); }
+        }
+
+        /* --- HIỆU ỨNG NỐT NHẠC LẤP LÁNH NỀN --- */
+        @keyframes float-up {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .floating-items-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Đặt dưới nội dung chính */
+            pointer-events: none;
+        }
+
+        .floating-items {
+            position: absolute;
+            font-size: 20px;
+            color: #FFDEAD; /* Ánh sao lấp lánh */
+            text-shadow: 0 0 5px #FFF8DC;
+            animation: float-up 20s infinite linear;
+        }
+        
+        /* Tạo nhiều nốt với vị trí, kích cỡ, và độ trễ khác nhau */
+        .floating-items:nth-child(1) { left: 10%; top: 90%; font-size: 40px; animation-delay: 0s; animation-duration: 22s; }
+        .floating-items:nth-child(2) { left: 25%; top: 85%; font-size: 56px; animation-delay: 4s; animation-duration: 18s; }
+        .floating-itmes:nth-child(3) { left: 40%; top: 70%; font-size: 60px; animation-delay: 8s; animation-duration: 25s; }
+        .floating-items:nth-child(4) { left: 60%; top: 95%; font-size: 40px; animation-delay: 12s; animation-duration: 15s; }
+        .floating-items:nth-child(5) { left: 80%; top: 80%; font-size: 37px; animation-delay: 16s; animation-duration: 20s; }
+        .floating-items:nth-child(6) { left: 15%; top: 50%; font-size: 48px; animation-delay: 2s; animation-duration: 24s; }
+        .floating-items:nth-child(7) { left: 70%; top: 40%; font-size: 55px; animation-delay: 6s; animation-duration: 19s; }
+        .floating-items:nth-child(8) { left: 90%; top: 60%; font-size: 56px; animation-delay: 10s; animation-duration: 23s; }
+
+    </style>
+</head>
+<body>
+    <!-- Lớp Nốt Nhạc Lấp Lánh Nền -->
+    <!-- Lớp nền ảnh tĩnh đã được áp dụng trực tiếp vào thẻ <body> -->
+    <div class="floating-items-bg">
+        <span class="floating-itmes">⋆˚꩜｡</span>
+        <span class="floating-items">Ი𐑼</span>
+        <span class="floating-items">⊹ ࣪ ˖</span>
+        <span class="floating-items">ִ ࣪𖤐</span>
+        <span class="floating-itmes">⋆˚꩜｡</span>
+        <span class="floating-items">Ი𐑼</span>
+        <span class="floating-items">⊹ ࣪ ˖</span>
+        <span class="floating-items">ִ ࣪𖤐</span>
+    </div>
+
+    <!-- 1. Header -->
+    <header class="bg-amber-900/40 backdrop-blur-md p-1 md:p-6 shadow-4xl sticky top-0 z-10 border-b border-amber-400/30">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                 <span class="daudong text-4xl">──── ୨୧ ────</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-wider glow-text uppercase flex items-center">
+                Tắt Đèn
+            </h1>
+            <p class="text-xl md:text-2xl mt-2 md:mt-0 font-light text-gray-300">
+                Tác giả: <span class="font-medium text-white">Ngô Tất Tố</span>
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <!-- Phần chính -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Ảnh Bìa Sách-->
+            <div class="lg:col-span-4 flex justify-center">
+            <div class="p-4 bg-amber-900/30 backdrop-blur-sm rounded-xl book-cover transition-transform transform hover:scale-[1.03] border border-amber-500/20">
+            <img src="https://upload.wikimedia.org/wikipedia/vi/b/b1/T%E1%BA%AFt_%C4%91%C3%A8n-Nh%C3%A3_Nam.jpeg" 
+                 alt="Bìa Sách Tắt Đèn của Ngô tất Tố" 
+                 class="rounded-lg w-full max-w-sm mx-auto"
+                 onerror="this.onerror=null;this.src='https://cafefcdn.com/203337114487263232/2024/10/24/photo-1729743358126-17297433582021168553963.png';"> <br>
+            <img src="https://bizweb.dktcdn.net/100/370/339/products/tat-den.jpg?v=1588518084007" 
+                 alt="Bìa Sách Tắt Đèn của Ngô tất Tố" 
+                 class="rounded-lg w-full max-w-sm mx-auto"
+                 onerror="this.onerror=null;this.src='https://cafefcdn.com/203337114487263232/2024/10/24/photo-1729743358126-17297433582021168553963.png';">
+               </div>
+
+            <!-- Tóm tắt & Cảm nhận -->
+            <article class="lg:col-span-2 space-y-8">
+                
+                <!-- Tóm tắt -->
+                <div class="p-6 bg-amber-100/20 backdrop-blur-md rounded-xl shadow-lg border border-amber-500/10">
+                    <h2 class="text-2xl font-bold mb-4 text-amber-300 glow-text flex items-center">
+                        <span class="mr-2">𐔌՞. .՞𐦯</span> Tóm Tắt Nội Dung
+                    </h2>
+                    <p class="text-lg text-slate-100">
+                       - Chị Dậu, tên thật Lê Thị Đào, vốn là cô gái giỏi giang, xuất thân trung lưu. Lấy chồng xong, vì liên tiếp lo đám ma cho mẹ và em trai anh Dậu rồi chồng lại đổ bệnh, gia đình rơi xuống cảnh nghèo đói cùng cực. Đến mùa sưu, chị chạy vạy khắp nơi không được, cuối cùng phải bán con gái và ổ chó mới đẻ để đóng sưu cho chồng. Nhưng chưa kịp thở, chị lại bị ép nộp thêm suất sưu của em chồng.</p>
+                    <p class="text-lg text-slate-100 mr-3">
+                       - Anh Dậu bị đánh đập, ngất lịm rồi được hàng xóm đưa về. Khi chị đang cho chồng ăn bát cháo duy nhất, cai lệ ập tới đòi sưu, khiến chị uất quá đánh lại chúng. Bị giải lên huyện, chị suýt bị quan huyện giở trò nên bỏ chạy.</p>
+                    <p  class="text-lg text-slate-100 mr-3">- Sau đó, chị gặp người nhà quan lớn, được cho tiền đóng sưu và giới thiệu việc lên tỉnh vắt sữa. Tưởng như thoát nạn, nhưng cuối cùng quan cụ lại mò vào buồng định xâm hại chị. Tác phẩm khép lại bằng hình ảnh chị chạy trốn vào màn đêm tối đen như chính tương lai mịt mù của đời chị.</p>
+                </div>
+
+                <!-- Cảm nhận Cá nhân -->
+                <div class="p-6 bg-amber-100/20 backdrop-blur-md rounded-xl shadow-lg border-t-2 border-var(--color-ocean-glow)">
+                    <h2 class="text-2xl font-bold mb-4 glow-text text-yellow-200">Cảm Nhận Cá Nhân</h2>
+                    <p class="italic text-lg text-slate-100">
+                        - Đọc Tắt đèn, ta thấy lòng nghẹn lại, vừa thương vừa bức xúc cho chị Dậu. Cảnh chị phải bán con, van xin và chống lại bọn cai lệ khiến ta vừa xót xa vừa tức giận. Câu “Chị vùng chạy ra ngoài giữa lúc trời tối đen như mực, đen như cái tiền đồ của chị vậy” làm ta cảm nhận rõ nỗi tuyệt vọng và bất lực. Nhưng đồng thời, chị Dậu vẫn mạnh mẽ, khiến ta vừa đau vừa nể phục. Cảm xúc khi đọc là hỗn hợp xót xa, giận dữ và ngưỡng mộ tinh thần con người trước bất công.
+                    </p>
+                 </div>
+                
+            </article>
+
+        </section>
+        
+        <!-- Trích Dẫn & Fun Fact -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Trích dẫn -->
+            <div class="p-6 bg-amber-100/10 backdrop-blur-md rounded-xl shadow-lg flex flex-col justify-center border border-white/10">
+                <h2 class="text-2xl font-bold mb-4 text-yellow-100">ᯓᡣ Trích Dẫn Ấn Tượng đến Người 𐭩 </h2>
+                <blockquote class="border-l-4 border-yellow-150 pl-4 italic text-xl text-white">
+                    <p>
+                    "Thà ngồi tù. Để cho chúng nó làm tình làm tội mãi thế, tôi không chịu được…" - Chị Dậu. <br>
+                    "Mày đánh chồng bà thì bà đánh lại!" - Chị Dậu. <br>
+                    "Chị vùng chạy ra ngoài giữa lúc trời tối đen như mực, đen như cái tiền đồ của chị vậy." - Câu kết của tác phẩm. 
+                    </p>
+                    <footer class="mt-2 text-sm text-gray-300">— Trích đoạn trong Tắt Đèn - Ngô Tất Tố.</footer>
+                </blockquote>
+            </div>
+
+            <!--Fun fact -->
+            <div class="p-6 bg-amber-100/10 backdrop-blur-md rounded-xl shadow-lg border border-white/10">
+                <h2 class="text-2xl font-bold mb-4 text-yellow-100">⋆.˚  Thông Tin Thú Vị ⋆.˚</h2>
+                <ul class="list-disc list-inside space-y-3 text-white">
+                    <li class="pl-2">
+                        <span class="font-Times New Roman text-yellow-300">- Khi viết Tắt đèn:</span> Có thời điểm Ngô Tất Tố sống ở một vùng nông thôn đúng mùa sưu thuế, nên mỗi tối ổng nghe tiếng kẻng, tiếng khóc, tiếng giằng co… và những âm thanh đó đi thẳng vào trang sách.<br>
+                    </li>
+                    <li class="pl-2">
+                        <span class="font-Times New Roman text-yellow-300">- Nhân vật quan huyện dâm ô</span>  được cho là phỏng theo một vụ tai tiếng có thật thời ấy, nhưng tác giả giấu tên để khỏi bị vạ lây.<br>
+                    </li>
+                    <li class="pl-2">
+                        <span class="font-Times New Roman text-yellow-300">- Câu “tối đen như cái tiền đồ của chị vậy”</span> vốn bị coi là quá táo bạo cho thời bấy giờ, nhưng lại trở thành một trong những câu kết đỉnh nhất văn học hiện thực Việt Nam.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="mt-12 p-4 bg-amber-900/40 text-center text-sm text-black-400">
+        <div class="container mx-auto">
+            <p>&copy; Được tạo bởi dhann.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
